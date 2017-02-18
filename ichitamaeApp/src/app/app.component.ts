@@ -2,27 +2,29 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import { Page1 } from '../pages/page1/page1';
-import { Page2 } from '../pages/page2/page2';
+import { Dashboard } from '../pages/dashboard/dashboard';
+import { IngredientCountPage } from '../pages/ingredient-count/ingredient-count';
+import { PastMealsPage } from '../pages/past-meals/past-meals';
+import { MealCatalogPage } from '../pages/meal-catalog/meal-catalog';
 
 
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: 'app.component.html'
 })
-export class MyApp {
+export class AppComponent {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Page1;
-
-  pages: Array<{title: string, component: any}>;
+  rootPage: any = Dashboard;
+  pages: Array<{ title: string, component: any }>;
 
   constructor(public platform: Platform) {
     this.initializeApp();
 
-    // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Page One', component: Page1 },
-      { title: 'Page Two', component: Page2 }
+      { title: 'Home', component: Dashboard },
+      { title: 'Past Meals', component: PastMealsPage },
+      { title: 'Your Ingredients', component: IngredientCountPage },
+      { title: 'Meal Catalog', component: MealCatalogPage }
     ];
 
   }
