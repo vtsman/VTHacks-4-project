@@ -10,13 +10,14 @@ import 'rxjs/add/operator/map';
 */
 @Injectable()
 export class Data {
-  value = 0;
   constructor(public http: Http) {
     console.log('Hello WatsonData Provider');
   }
 
-  test() {
-    return this.value;
+  getCapitalOne() {
+    return this.http.get('http://api.reimaginebanking.com/accounts/58a914541756fc834d90559c/purchases?key=e27720efd690c95aeda7c6ed631b9b27')
   }
+
+
 
 }
