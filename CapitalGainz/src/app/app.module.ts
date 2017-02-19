@@ -4,14 +4,16 @@ import { MyApp } from './app.component';
 import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
 import { HomePage } from '../pages/home/home';
-import { Data } from '../providers/watson-data';
+import { Data } from '../providers/data';
+import { ClassifierPage } from '../pages/classifier/classifier';
 
 
 var importData = [
   MyApp,
   Page1,
   Page2,
-  HomePage
+  HomePage,
+  ClassifierPage
 ]
 @NgModule({
   declarations: importData,

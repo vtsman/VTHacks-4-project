@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { Data } from '../../providers/watson-data';
+import { Data } from '../../providers/data';
 
 /*
   Generated class for the Home page.
@@ -18,7 +18,5 @@ export class HomePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
-    this.val = this._data.test();
   }
-
 }
